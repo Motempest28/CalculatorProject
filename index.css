@@ -1,0 +1,50 @@
+/*for HTML and CSS reference: https://www.youtube.com/watch?v=j59qQ7YWLxw&t=105s*/
+body{
+    background: linear-gradient(to bottom, #FFFF00, #FFA500);
+    padding: 0;
+    margin: 0;  
+}
+
+.calculator-layout {
+    grid-template-columns: repeat(4, 110px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 110px);
+    grid-gap: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.calculator-layout > button {
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    border: 1px solid black; 
+}
+
+.calculator-layout > button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.display{
+    grid-column: 1 /-1;
+    background-color: rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all; 
+}
+
+.display .oldDisplay{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+}
+
+.display .currentDisplay{
+    color: white;
+    font-size: 3.5rem;
+}
